@@ -1,0 +1,8 @@
+Account details: Bayonle Adetogun;32221272223202621;Savings;bayoade@gmail.com;12000.0
+Account details: Bode Akinolu;2225021948;Savings;boakin@gmail.com;23000.0
+Account details: Bolatito Gbolagade ; 2754678842 ; Savings ; bogbade@yahoo.com ; 30000.0
+Account details: Tokunbo Deikolola ; 2953203036 ; Savings ; Tokunbo@gmail.com ; 456000.0
+Goke ayinde ; 2023254518 ; Savings ; gokeayinde@gmail.com ; 75499.0
+Mayowa Julius ; 2825410462 ; Current ; mayorde@gmail.com ; 121213132131334.0
+Bukunmi ; 2067757058 ; Fixed ; ebukunmiola@gmail.com ; 1e+20
+Gbolahan Afolabi ; 2242953437 ; Savings ; afogbola@outlook.com ; 234235.0

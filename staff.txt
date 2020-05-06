@@ -1,0 +1,9 @@
+Staff details
+    Username:Password:Email:Full Name
+1.  BukunmiOla:Bola@K6789
+    ebukunmiola@gmail.com
+    Bukunmi, Ola
+
+2.  Lizzyb:liZZy@D3456
+    lizzybwears@gmail.com
+    Elizabeth, Emmanuel
