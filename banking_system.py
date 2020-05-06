@@ -37,10 +37,10 @@ def staff_login():
         user_session.close()
     else:
         print ("User details does not exit")
-    return user_exist
+    return user_exist,username
 
 # This function creates account for the customers taking their names, account type, email opening balance and then supply their account numbers
-def create_account ():
+def create_account (username):
     account_name = input ("Enter account name : ")
     account_email = input ("Enter account email : ")
     correct_email = check_email(account_email)          #jump to the function check_email()
@@ -62,11 +62,12 @@ def create_account ():
     customers = open("customer.txt", "a")
     account_details = "\n"+account_name+" ; "+account_number+" ; "+account_type+ " ; "+ account_email+ " ; "+ str(opening_balance)
     customers.write(account_details)
+    customers.write("\n   created by "+username+" at "+str(datetime.datetime.now()))
     print("Account created successfully")
     customers.close()
 
     user_session = open("user_session.txt", "a")
-    user_session.write("\n   created account "+account_number+" at ")
+    user_session.write("\n   Created account "+account_number+" at ")
     user_session.write(str(datetime.datetime.now())) # prints the current time in the file
     user_session.close()
     
@@ -106,7 +107,7 @@ def generate_account_number():
     return account_number
     
 #This function will fetch the account details of a customer whose account number has been supplied from the text file
-def fetch_account(account_number):
+def fetch_account(account_number,username):
     customers = open("customer.txt", "r")
     fetching =customers.readlines()
     for x in fetching:
@@ -116,26 +117,26 @@ def fetch_account(account_number):
             print(x)
 
     user_session = open("user_session.txt", "a")
-    user_session.write("\n   checked account details of "+account_number+" at ")
+    user_session.write("\n"+username+" checked account details of "+account_number+" at ")
     user_session.write(str(datetime.datetime.now())) # prints the current time in the file
     user_session.close()
 
 #This is the main function
 def main():
     print("Hello, Good day! \nWelcome to StartNg Bank Plc.")
-    action = input("Enter 1 to Login or any other key to Close App >")
+    action = input("1. Staff Login \n2. Close App \n>>")
     while action == "1":
-        user_exist=staff_login()
+        user_exist,username=staff_login()
         
         while user_exist==True:
             action=""
             print("What would you like to do? Enter 1,2 or 3.")
             action = input("1. Create new Account. \n2. Check Account details. \n3. Log Out \n>>")
             if action == "1":
-                create_account()
+                create_account(username)
             elif action == "2":
                 account_number = input("Enter account number here: ")
-                fetch_account(account_number)
+                fetch_account(account_number,username)
             elif action == "3":
                 os.remove("user_session.txt")
                 user_exist = False
@@ -149,5 +150,9 @@ def main():
 
 
     else:
-        exit()
+        if action == "2":
+            exit()
+        else: 
+            print("Invalid input! Try again!")
+            main()
 main()
