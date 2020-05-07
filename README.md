@@ -2,7 +2,7 @@
 A basic banking system that stores data using the Python File System
 
 ##### Background:
-Having created the project, new files (staff.txt and customer.txt) were added to the project.
+Having created the project folder, new files (staff.txt and customer.txt) were added to the project.
 The staff.txt contains 2 staff details which had their Username, Password, Email andFull Name
 While customer.txt remained empty
 The flowchart of how the program run is given below.
