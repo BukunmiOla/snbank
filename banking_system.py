@@ -36,7 +36,7 @@ def staff_login():
         user_session.write(str(datetime.datetime.now())) # prints the current date and time in the file
         user_session.close()
     else:
-        print ("User details does not exit")
+        print ("Invalid credentials, Try again!")
     return user_exist,username
 
 # This function creates account for the customers taking their names, account type, email opening balance and then supply their account numbers

@@ -6,7 +6,7 @@ Having created the project, new files (staff.txt and customer.txt) were added to
 The staff.txt contains 2 staff details which had their Username, Password, Email andFull Name
 While customer.txt remained empty
 The flowchart of how the program run is given below.
-
+![flowchart](/flowchart.jpg)
 ##### Data used:
 * Username (string)
 * Password (string)
